@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class CharController : MonoBehaviour
 {
     public PlayerInput input;
