@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833f86031a0c6cb43b0b6e7e4c162973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeToKrakenAggro: 5
+  changeToKrakenAggro: 0
 --- !u!4 &1436657338
 Transform:
   m_ObjectHideFlags: 0
