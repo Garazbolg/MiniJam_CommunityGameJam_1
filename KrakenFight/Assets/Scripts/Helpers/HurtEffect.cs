@@ -8,20 +8,30 @@ public class HurtEffect : MonoBehaviour
     private SpriteRenderer image;
     [SerializeField] private float hurtTime;
     [SerializeField] private Color hurtColor;
+
+    private bool hurting;
     private void Awake()
     {
         image = GetComponent<SpriteRenderer>();
     }
     public void HurtEffectCallback()
     {
-        StartCoroutine("HurtEffectRoutine");
+        if (!hurting)
+        {
+            StartCoroutine("HurtEffectRoutine");
+        }
     }
 
     public IEnumerator HurtEffectRoutine()
     {
-        Color originalColor = image.color;
-        image.color = hurtColor;
-        yield return new WaitForSeconds(hurtTime);
-        image.color = originalColor;
+        hurting = true;
+        if (image)
+        {
+            Color originalColor = image.color;
+            image.color = hurtColor;
+            yield return new WaitForSeconds(hurtTime);
+            image.color = originalColor;
+        }
+        hurting = false;
     }
 }
