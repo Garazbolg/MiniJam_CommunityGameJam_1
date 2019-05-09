@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baee1cd1b29155f40b5c614781d07770, type: 3}
-  m_Name: 1_Rations
+  m_Name: 1_Water
   m_EditorClassIdentifier: 
-  resourceName: Rations
-  resourceBuyCost: 10
-  resourceSellCost: 0
-  maxInventoryStack: 20
+  resourceName: Water (Barrel)
+  resourceBuyCost: 15
+  resourceSellCost: 5
+  maxInventoryStack: 5
   resourceIcon: {fileID: 0}

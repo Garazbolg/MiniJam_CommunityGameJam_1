@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baee1cd1b29155f40b5c614781d07770, type: 3}
-  m_Name: 5_CannonBall
+  m_Name: 7_Chum
   m_EditorClassIdentifier: 
-  resourceName: Cannon Balls
-  resourceBuyCost: 10
-  resourceSellCost: 5
-  maxInventoryStack: 20
+  resourceName: Chum
+  resourceBuyCost: 3
+  resourceSellCost: 0
+  maxInventoryStack: 50
   resourceIcon: {fileID: 0}

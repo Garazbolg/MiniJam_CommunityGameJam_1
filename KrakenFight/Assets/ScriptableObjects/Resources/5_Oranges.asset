@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baee1cd1b29155f40b5c614781d07770, type: 3}
-  m_Name: 4_Lumber
+  m_Name: 5_Oranges
   m_EditorClassIdentifier: 
-  resourceName: Lumber
-  resourceBuyCost: 20
-  resourceSellCost: 5
-  maxInventoryStack: 10
+  resourceName: Oranges
+  resourceBuyCost: 5
+  resourceSellCost: 0
+  maxInventoryStack: 30
   resourceIcon: {fileID: 0}
