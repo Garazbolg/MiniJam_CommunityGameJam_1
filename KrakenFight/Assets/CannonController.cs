@@ -15,8 +15,7 @@ public class CannonController : MonoBehaviour
     public void ShootCannonBall()
     {
         GameObject cannonBallObj = cannonBallPool.Get();
-        cannonBallObj.GetComponent<CannonBallController>().LaunchBall(this.transform.up * force);
-        cannonBallObj.transform.position = this.transform.position;
+        cannonBallObj.GetComponent<CannonBallController>().LaunchBall(this.transform.up * force, this.transform.position);
         cannonBallObj.SetActive(true);
     }
 }

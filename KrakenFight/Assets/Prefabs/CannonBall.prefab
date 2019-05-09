@@ -47,7 +47,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sendToPool: {fileID: 4138167595546534109}
-  OnBallHit:
+  travelDistance: 10
+  startSize: 2
+  OnBallHitKraken:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnBallHitWater:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -153,7 +160,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 27
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 523cd0913fe5db6478965947f0cfa429, type: 3}
   m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
   m_FlipX: 0

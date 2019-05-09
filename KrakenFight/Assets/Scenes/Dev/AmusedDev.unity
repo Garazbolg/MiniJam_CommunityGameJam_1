@@ -1209,11 +1209,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1387370389}
     m_Modifications:
-    - target: {fileID: 4612987116784988512, guid: 773ec21e6c13c3242b9006c0c13cb946,
-        type: 3}
-      propertyPath: cannonBallPool
-      value: 
-      objectReference: {fileID: 220332124}
     - target: {fileID: 7997110440944070775, guid: 773ec21e6c13c3242b9006c0c13cb946,
         type: 3}
       propertyPath: m_Name
@@ -1274,6 +1269,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4612987116784988512, guid: 773ec21e6c13c3242b9006c0c13cb946,
+        type: 3}
+      propertyPath: cannonBallPool
+      value: 
+      objectReference: {fileID: 220332124}
+    - target: {fileID: 4612987116784988512, guid: 773ec21e6c13c3242b9006c0c13cb946,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 773ec21e6c13c3242b9006c0c13cb946, type: 3}
 --- !u!4 &1485388383 stripped
@@ -1322,11 +1327,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1387370389}
     m_Modifications:
-    - target: {fileID: 4612987116784988512, guid: 773ec21e6c13c3242b9006c0c13cb946,
-        type: 3}
-      propertyPath: cannonBallPool
-      value: 
-      objectReference: {fileID: 220332124}
     - target: {fileID: 7997110440944070775, guid: 773ec21e6c13c3242b9006c0c13cb946,
         type: 3}
       propertyPath: m_Name
@@ -1385,6 +1385,16 @@ PrefabInstance:
     - target: {fileID: 7997110440944070774, guid: 773ec21e6c13c3242b9006c0c13cb946,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612987116784988512, guid: 773ec21e6c13c3242b9006c0c13cb946,
+        type: 3}
+      propertyPath: cannonBallPool
+      value: 
+      objectReference: {fileID: 220332124}
+    - target: {fileID: 4612987116784988512, guid: 773ec21e6c13c3242b9006c0c13cb946,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1453,11 +1463,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1387370389}
     m_Modifications:
-    - target: {fileID: 4612987116784988512, guid: 773ec21e6c13c3242b9006c0c13cb946,
-        type: 3}
-      propertyPath: cannonBallPool
-      value: 
-      objectReference: {fileID: 220332124}
     - target: {fileID: 7997110440944070775, guid: 773ec21e6c13c3242b9006c0c13cb946,
         type: 3}
       propertyPath: m_Name
@@ -1518,5 +1523,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4612987116784988512, guid: 773ec21e6c13c3242b9006c0c13cb946,
+        type: 3}
+      propertyPath: cannonBallPool
+      value: 
+      objectReference: {fileID: 220332124}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 773ec21e6c13c3242b9006c0c13cb946, type: 3}
