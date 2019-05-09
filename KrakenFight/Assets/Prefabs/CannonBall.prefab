@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4138167595546534096}
   - component: {fileID: 4138167595546534099}
+  - component: {fileID: 7680161536603812413}
   - component: {fileID: 4138167595546534098}
   - component: {fileID: 4138167595546534109}
-  m_Layer: 0
+  - component: {fileID: 5628963049969771810}
+  m_Layer: 12
   m_Name: CannonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,9 +51,22 @@ MonoBehaviour:
   sendToPool: {fileID: 4138167595546534109}
   travelDistance: 10
   startSize: 2
-  OnBallHitKraken:
+  drag: -0.2
+  OnBallHitObject:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7680161536603812413}
+        m_MethodName: SpawnParticle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7015953072068791995, guid: ffbae2d9a6a8f584289ab95f7d15bf19,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnBallHitWater:
@@ -59,6 +74,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &7680161536603812413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138167595546534108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f187644414830e448bd87a38b199f325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &4138167595546534098
 Rigidbody2D:
   serializedVersion: 4
@@ -93,6 +120,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pool: {fileID: 0}
+--- !u!61 &5628963049969771810
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138167595546534108}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4994730605497723998
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5976229894398624170}
   - component: {fileID: 3199866534541944871}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CannonBallRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

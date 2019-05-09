@@ -11,13 +11,16 @@ public class CannonBallController : MonoBehaviour
 
     [SerializeField] private float travelDistance;
     [SerializeField] private float startSize;
+    [SerializeField] private float drag;
+    private Collider2D ballCollider;
     private float distanceTravelled;
     private Vector3 lastPosition;
 
-    public UnityEvent OnBallHitKraken;
+    public UnityEvent OnBallHitObject;
     public UnityEvent OnBallHitWater;
     private void Awake()
     {
+        ballCollider = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         lastPosition = this.transform.position;
     }
@@ -38,12 +41,18 @@ public class CannonBallController : MonoBehaviour
     private void Update()
     {
         distanceTravelled += (lastPosition - this.transform.position).magnitude;
+
         if(distanceTravelled >= travelDistance)
         {
             OnBallHitWater?.Invoke();
             sendToPool.SendBackToPool();
         }
+        rb.AddForce(rb.velocity * drag);
         this.transform.localScale = Vector3.one * ((travelDistance - distanceTravelled) / travelDistance) * startSize ;
+        if(this.transform.localScale.magnitude < 0.2f)
+        {
+            ballCollider.enabled = false;
+        }
         lastPosition = this.transform.position;
     }
 
@@ -54,7 +63,12 @@ public class CannonBallController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        OnBallHitKraken?.Invoke();
+        OnBallHitObject?.Invoke();
+        DamageTakeController dpCont = collision.GetComponent<DamageTakeController>();
+        if (dpCont)
+        {
+            dpCont.DealDamage(1);
+        }
         sendToPool.SendBackToPool();
     }
 }

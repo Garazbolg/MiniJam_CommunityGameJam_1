@@ -25,10 +25,13 @@ public class HurtEffect : MonoBehaviour
     public IEnumerator HurtEffectRoutine()
     {
         hurting = true;
-        Color originalColor = image.color;
-        image.color = hurtColor;
-        yield return new WaitForSeconds(hurtTime);
-        image.color = originalColor;
+        if (image)
+        {
+            Color originalColor = image.color;
+            image.color = hurtColor;
+            yield return new WaitForSeconds(hurtTime);
+            image.color = originalColor;
+        }
         hurting = false;
     }
 }

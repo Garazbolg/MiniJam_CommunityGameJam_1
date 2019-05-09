@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 220332123}
   - component: {fileID: 220332124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CannonBallsPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,6 +244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 878567389253460522, guid: a1d353228def6c64f94315fde1fbe5c4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1d353228def6c64f94315fde1fbe5c4, type: 3}
@@ -576,9 +581,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59585d4a0c261547b44d7e42232e740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 0
   useStatic: 0
-  healthVar: {fileID: 11400000, guid: 4b691a61d79d2a345a4d816626569033, type: 2}
+  healthVar: {fileID: 0}
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -614,20 +619,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDamageTake:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 490313878}
-        m_MethodName: TakeDamage
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+      m_Calls: []
+    m_TypeName: IntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &490313880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,6 +671,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 334906514}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &704700940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704700939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6953c561e83a1489421c9335416a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurtTime: 0.2
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!61 &704700942
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -691,7 +698,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.7800274}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -702,8 +709,35 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.7933335, y: 8.36}
+  m_Size: {x: 6.7933335, y: 6.799945}
   m_EdgeRadius: 0
+--- !u!114 &704700943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704700939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e249d258a56fb624a819096dd91c6f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDamageTake:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 869871354}
+        m_MethodName: TakeDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: IntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &782942533
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +831,8 @@ GameObject:
   m_Component:
   - component: {fileID: 869871352}
   - component: {fileID: 869871351}
+  - component: {fileID: 869871353}
+  - component: {fileID: 869871354}
   m_Layer: 0
   m_Name: Kraken
   m_TagString: Untagged
@@ -847,6 +883,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869871353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869871350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e249d258a56fb624a819096dd91c6f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDamageTake:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: IntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &869871354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869871350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59585d4a0c261547b44d7e42232e740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  useStatic: 0
+  healthVar: {fileID: 11400000, guid: 4bbe86b5863998c46a880124ae6f3c30, type: 2}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 704700940}
+        m_MethodName: HurtEffectCallback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &979851804
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 979851805}
   - component: {fileID: 979851806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BoatRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,7 +1024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052428930}
   - component: {fileID: 1052428931}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShipCollider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -999,7 +1087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1212557973}
   - component: {fileID: 1212557974}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShipCollider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1236332972}
   - component: {fileID: 1236332973}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShipCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1172,7 +1260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1387370389}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,11 +1362,6 @@ PrefabInstance:
       propertyPath: cannonBallPool
       value: 
       objectReference: {fileID: 220332124}
-    - target: {fileID: 4612987116784988512, guid: 773ec21e6c13c3242b9006c0c13cb946,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 773ec21e6c13c3242b9006c0c13cb946, type: 3}
 --- !u!4 &1485388383 stripped
@@ -1392,11 +1475,6 @@ PrefabInstance:
       propertyPath: cannonBallPool
       value: 
       objectReference: {fileID: 220332124}
-    - target: {fileID: 4612987116784988512, guid: 773ec21e6c13c3242b9006c0c13cb946,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 773ec21e6c13c3242b9006c0c13cb946, type: 3}
 --- !u!1 &2095824108
@@ -1409,7 +1487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2095824109}
   - component: {fileID: 2095824110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShipCollider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095824108}
   m_LocalRotation: {x: -0.5649173, y: -0, z: -0, w: 0.82514757}
-  m_LocalPosition: {x: -2.47, y: -2.24, z: -8.76}
+  m_LocalPosition: {x: -2.47, y: -1.95, z: -9.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1387370389}

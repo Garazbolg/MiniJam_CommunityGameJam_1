@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+[System.Serializable]
+public class IntEvent : UnityEvent<int> { }
 public class DamageTakeController : MonoBehaviour
 {
-    public UnityEvent OnDamageTake;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public IntEvent OnDamageTake;
+    public void DealDamage(int amount)
     {
-        Debug.Log("I took damage " + collision.gameObject.name);
-        OnDamageTake?.Invoke();
+        OnDamageTake?.Invoke(amount);
     }
 }

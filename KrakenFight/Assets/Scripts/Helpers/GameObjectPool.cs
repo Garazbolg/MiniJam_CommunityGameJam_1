@@ -20,6 +20,11 @@ public class GameObjectPool : MonoBehaviour
         {
             GameObject thing = Instantiate<GameObject>(prefabs[Random.Range(0, prefabs.Length)], this.transform);
             thing.SetActive(false);
+            SendToPool sendToPool = thing.GetComponent<SendToPool>();
+            if (sendToPool)
+            {
+                sendToPool.pool = this;
+            }
             pool.Enqueue(thing);
         }
     }

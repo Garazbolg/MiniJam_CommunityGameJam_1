@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7691666118041887046}
   - component: {fileID: 7691666118041887047}
   - component: {fileID: 7691666118041887044}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DamagePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

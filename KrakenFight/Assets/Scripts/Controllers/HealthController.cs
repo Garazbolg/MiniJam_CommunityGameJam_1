@@ -7,10 +7,10 @@ using UnityEngine.Events;
 
 public class HealthController : MonoBehaviour
 {
-    [SerializeField] private float health;
+    [SerializeField] private int health;
     [SerializeField] private bool useStatic;
-    [SerializeField] private FloatVariable healthVar;
-    public float Health
+    [SerializeField] private IntVariable healthVar;
+    public int Health
     {
         get { return useStatic ? healthVar : health; }
         set { if (useStatic) { healthVar.SetValue(value); } else { health = value; } }
@@ -19,7 +19,7 @@ public class HealthController : MonoBehaviour
     public UnityEvent OnDeath;
     public UnityEvent OnTakeDamage;
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(int amount)
     {
         Health -= amount;
         OnTakeDamage?.Invoke();
