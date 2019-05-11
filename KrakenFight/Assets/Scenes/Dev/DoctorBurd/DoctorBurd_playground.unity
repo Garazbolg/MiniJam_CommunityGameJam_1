@@ -273,8 +273,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1436657338}
   - component: {fileID: 1436657337}
+  - component: {fileID: 1436657339}
   m_Layer: 0
-  m_Name: TestObject
+  m_Name: Test_Kraken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292,7 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833f86031a0c6cb43b0b6e7e4c162973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeToKrakenAggro: 0
 --- !u!4 &1436657338
 Transform:
   m_ObjectHideFlags: 0
@@ -307,6 +307,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1436657339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436657336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205d3c58df1214d4e90fe2ea9acce778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1521630461
 GameObject:
   m_ObjectHideFlags: 0

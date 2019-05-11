@@ -1,0 +1,5 @@
+krakenAttackName,krakenAttackFrequency phase 4,krakenAttackFrequency phase 3,krakenAttackFrequency phase 2,krakenAttackFrequency phase 1,krakenAttackWarning,krakenAttackPlayerDamage,krakenAttackBoatDamage,krakenAttackForceMin,krakenAttackForceMax,krakenAttackSpeedMin,krakenAttackSpeedMax,krakenChanceToDrownPlayer,"on Miss, KrakenAggro.ChangeKrakenAggro(int)",Triggers during  AggroStates.  ?,Notes
+Smash,0.6,0.7,0.8,1,0.5,15,10,0,0,1,1.9,0,1,"Curious, Enraged, Frenzied, Wrathful",
+Rock The Boat,0.1,0.1,0.2,0,2,5,20,0.1,1,1,1,0.05,0,"Enraged, Frenzied, Wrathful",Drowning only possible if crew within x range of ship edge
+Swipe,0.2,0.2,0,0,1,10,5,0,0,1,2,0.05,3,"Frenzied, Wrathful",
+Throw,0.1,0,0,0,0,50,0,0,0,1,1,0.05,0,Wrathful,"Requires “Smash” attack success, first."

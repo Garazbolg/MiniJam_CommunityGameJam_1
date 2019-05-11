@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c959f232395dd6489c9876117de7f5d, type: 3}
+  m_Name: DOCT
+  m_EditorClassIdentifier: 
+  crewUniqueID: DOCT
+  crewDisplayName: Doctor
+  crewIsUpgraded: 1
+  crewUpgradesTo: null
+  crewUpgradesFrom: MEDI
+  crewHealth: 130
+  moveSpeed: 10
+  maxHunger: 100
+  maxThirst: 100
+  maxMorale: 130
+  maxScurvy: 130
+  swordDamage: 12
+  fixShipAmount: 50
+  reactionSpeed: 0.6
+  cannonAccuracy: 1
