@@ -5,11 +5,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
 public class HealthController : MonoBehaviour
 {
+    
+    
     [SerializeField] private int health;
     [SerializeField] private bool useStatic;
     [SerializeField] private IntVariable healthVar;
+    
     public int Health
     {
         get { return useStatic ? healthVar : health; }
