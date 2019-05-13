@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class HurtEffect : MonoBehaviour
 {
     private SpriteRenderer image;
@@ -10,6 +11,7 @@ public class HurtEffect : MonoBehaviour
     [SerializeField] private Color hurtColor;
 
     private bool hurting;
+ 
     private void Awake()
     {
         image = GetComponent<SpriteRenderer>();
@@ -31,6 +33,7 @@ public class HurtEffect : MonoBehaviour
             image.color = hurtColor;
             yield return new WaitForSeconds(hurtTime);
             image.color = originalColor;
+
         }
         hurting = false;
     }
