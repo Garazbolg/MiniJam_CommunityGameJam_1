@@ -12,6 +12,14 @@ public class CannonController : MonoBehaviour
         ShootCannonBall();
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            ShootCannonBall();
+        }
+    }
+
     public void ShootCannonBall()
     {
         GameObject cannonBallObj = cannonBallPool.Get();
