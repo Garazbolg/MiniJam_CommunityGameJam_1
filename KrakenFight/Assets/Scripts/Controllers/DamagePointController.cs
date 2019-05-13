@@ -11,5 +11,10 @@ public class DamagePointController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         OnHitDetected?.Invoke(collision.gameObject);
+        DamageTakeController dpCont = collision.GetComponent<DamageTakeController>();
+        if (dpCont)
+        {
+            dpCont.DealDamage(1);
+        }
     }
 }
