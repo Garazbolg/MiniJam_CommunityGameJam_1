@@ -14,10 +14,6 @@ public class CannonController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            ShootCannonBall();
-        }
     }
 
     public void ShootCannonBall()
